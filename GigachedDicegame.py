@@ -157,5 +157,64 @@ elif p2score > p1score:
 else:
     print("Both players have a score of",p1score)
 print("")
+time.sleep(2)
 
 
+
+
+
+
+for letter in ("Round 2"):
+    sys.stdout.write(letter)
+    time.sleep(.05)
+print("")
+for letter in (p1name," Rolling..."):
+    sys.stdout.write(letter)
+    time.sleep(.05)
+print("")
+time. sleep(random.randint(1,3))
+p1d1 = random.randint(1,6)
+p1d2 = random.randint(1,6)
+print("")
+tempscore = p1d1 + p1d2
+print(p1name,"rolled a",p1d1,"and a",p1d2,"and the total is",tempscore)
+if tempscore % 2  == 0:
+    tempscore = tempscore * 2
+    p1score = p1sore + tempscore
+    print("Because added total is even, the total is doubled, giving a total of",p1score)
+    p1score = p1score + tempscore
+elif p1score + tempscore < 5:
+    p1score = 0
+    print("Because added total is odd, the total has 5 subtracted, giving a total of",p1score)
+else:
+    p1score = p1score + tempscore - 5
+    print("Because added total is odd, the total has 5 subtracted, giving a total of",p1score)
+time.sleep(5)
+print("")
+print(p2name,"Rolling...")
+time. sleep(random.randint(1,3))
+p2d1 = random.randint(1,6)
+p2d2 = random.randint(1,6)
+print("")
+tempscore = p2d1 + p2d2
+print(p2name,"rolled a",p2d1,"and a",p2d2,"and the total is",tempscore)
+if tempscore % 2  == 0:
+    tempscore = tempscore * 2
+    p2score = p2score + tempscore
+    print("Because added total is even, the total is doubled, giving a score of",p2score)
+elif p2score + tempscore < 5:
+    p2score = 0
+    print("Because added total is odd, the total has 5 subtracted, giving a score of",p2score)
+else:
+    p2score = p2score + tempscore - 5
+    print("Because added total is odd, the total has 5 subtracted, giving a score of",p2score)
+time.sleep(5)
+p2score = tempscore
+p2score = p2score + tempscore
+if p1score > p2score:
+    print("After round 2",p1name,"is winning with a score of",p1score," and",p2name,"has a score of ",p2score,".")
+elif p2score > p1score:
+    print("After round 2",p2name,"is winning with a score of",p2score," and",p1name,"has a score of ",p1score,".")
+else:
+    print("Both players have a score of",p1score)
+print("")
